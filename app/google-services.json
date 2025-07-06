@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "278781878381",
+    "project_id": "brainbot-6ca3b",
+    "storage_bucket": "brainbot-6ca3b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278781878381:android:7f25596c812d810a791f64",
+        "android_client_info": {
+          "package_name": "edu.ma.appx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtSk7vOkHtC2J4Q_dx-OLGpmMdinxqYPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

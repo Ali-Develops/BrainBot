@@ -1,6 +1,6 @@
 package edu.ma.appx.adapters;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
-
 import edu.ma.appx.R;
 
 public class SuggestedPromptsAdapter extends RecyclerView.Adapter<SuggestedPromptsAdapter.PromptViewHolder> {
-    private List<String> prompts;
-    private OnPromptClickListener listener;
+    private final List<String> prompts;
+    private final OnPromptClickListener listener;
 
     public interface OnPromptClickListener {
         void onPromptClick(String prompt);
@@ -52,6 +51,7 @@ public class SuggestedPromptsAdapter extends RecyclerView.Adapter<SuggestedPromp
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void updatePrompts(List<String> newPrompts) {
         prompts.clear();
         prompts.addAll(newPrompts);

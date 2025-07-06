@@ -1,6 +1,8 @@
 # 🤖 BrainBot – AI-Powered Conversational Android App
 
-BrainBot is an advanced Android application built using **Java** and powered by **Cohere.ai**’s generative AI models. Developed as a mobile development semester project, BrainBot goes beyond basic chatbot functionality by integrating features like intelligent auto-completion, voice conversation, prompt suggestions, and OCR (optical character recognition) support.
+**BrainBot** is an advanced Android application built using **Java**, integrated with **Firebase**, and powered by **Cohere.ai**’s generative AI models. Created as a mobile development semester project, BrainBot goes beyond basic chatbot functionality by offering intelligent auto-completion, voice interaction, OCR (Optical Character Recognition), and chat history management.
+
+---
 
 ## Features
 
@@ -8,24 +10,28 @@ BrainBot is an advanced Android application built using **Java** and powered by 
   Engage in human-like conversations powered by Cohere's large language models.
 
 - **AI-Powered Auto-Completion**  
-  As users type, BrainBot intelligently suggests completions using real-time AI inference.
+  Receive smart suggestions as you type using real-time AI inference.
 
 - **Voice Conversations**  
-  Talk to the bot using speech input and get audio responses for a hands-free experience.
+  Talk to the bot using speech input and get spoken responses for a hands-free experience.
 
 - **OCR Integration**  
-  Extract text from images using Optical Character Recognition and chat with AI based on that content.
+  Extract and interact with text from images using Optical Character Recognition.
+
+- **Persistent Chat History**  
+  All chats and messages are saved in **Firebase Firestore**, allowing users to revisit previous conversations.
 
 - **Modern Android UI**  
-  Smooth, responsive, and user-friendly interface following best design practices.
+  Clean, responsive, and user-friendly interface following modern design principles.
 
 ---
 
 ## Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| **Java** | Core Android development |
-| **Cohere.ai API** | Generative AI and NLP features |
+| Technology        | Purpose                             |
+|-------------------|-------------------------------------|
+| **Java**          | Core Android development            |
+| **Firebase**      | Authentication & Firestore database |
+| **Cohere.ai API** | AI-powered chat and NLP features    |
 
 ---

@@ -2,4 +2,23 @@
     <string name="app_name">AI Chat</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="brain_bot">Brain Bot</string>
+    <string name="ai_powered_conversational_android_app">AI-Powered Conversational Android App</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
+    <string name="logo">Logo</string>
+    <string name="welcome_to_brainbot">Welcome to BrainBot!</string>
+    <string name="type_and_send_something_to_start_a_chat">Type and send something to start a chat</string>
+    <string name="ocr">OCR</string>
+    <string name="mic">Mic</string>
+    <string name="ask_me_anything">Ask me anything...</string>
+    <string name="send">Send</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="logout">Logout</string>
+    <string name="start_a_new_chat">Start a New Chat</string>
+    <string name="recent_chats">Recent Chats</string>
 </resources>

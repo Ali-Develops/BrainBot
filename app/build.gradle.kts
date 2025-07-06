@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -31,8 +32,7 @@ android {
     }
 }
 
- dependencies {
-
+dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -41,7 +41,15 @@ android {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    // Lottie
+    implementation ("com.airbnb.android:lottie:6.6.7")
+
+    // Google ML Toolkit
     implementation(libs.text.recognition)
     implementation("com.google.mlkit:text-recognition:16.0.1")
-    implementation ("com.google.code.gson:gson:2.10.1") // Add this line
+
+    // Firebase Config
+    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation ("com.google.firebase:firebase-auth:22.3.1")
+    implementation ("com.google.firebase:firebase-firestore:24.11.0")
 }

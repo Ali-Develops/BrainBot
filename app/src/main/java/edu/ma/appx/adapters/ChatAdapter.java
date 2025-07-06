@@ -5,13 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.view.animation.DecelerateInterpolator; // For smoother animation
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
-
 import edu.ma.appx.R;
 import edu.ma.appx.models.Message;
 
@@ -53,34 +49,16 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             AIViewHolder aiHolder = (AIViewHolder) holder;
             aiHolder.bind(message);
 
-            // Show loading only if it's still "thinking"
             if (message.isLoading()) {
                 aiHolder.loadingIndicator.setVisibility(View.VISIBLE);
             } else {
                 aiHolder.loadingIndicator.setVisibility(View.GONE);
             }
         }
-
-        // --- Animation Logic ---
-        // Apply animation only when the message is first bound/inserted
-        // and has not been animated before.
         if (!message.isAnimated()) {
             // Option 1: Simple Fade-in (recommended as a good default)
             holder.itemView.setAlpha(0f);
             holder.itemView.animate().alpha(1f).setDuration(400).start();
-
-            // Option 2: Slide Up (uncomment to try this instead)
-            // Note: This often works best if you set translationY outside of the initial view state
-            // and then animate to 0. It might require the view to be laid out first to get its height.
-            // For simplicity, a fade-in is more robust without knowing initial view height.
-            // holder.itemView.setTranslationY(holder.itemView.getHeight() * 0.5f); // Start slightly from bottom
-            // holder.itemView.animate().translationY(0f).setDuration(400).setInterpolator(new DecelerateInterpolator()).start();
-
-            // Option 3: Scale In (uncomment to try this instead)
-            // holder.itemView.setScaleX(0.8f);
-            // holder.itemView.setScaleY(0.8f);
-            // holder.itemView.animate().scaleX(1.0f).scaleY(1.0f).setDuration(300).setInterpolator(new DecelerateInterpolator()).start();
-
             message.setAnimated(true); // Mark as animated to prevent re-animating on scroll
         }
         // --- End Animation Logic ---
@@ -105,7 +83,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public class AIViewHolder extends RecyclerView.ViewHolder {
+    static class AIViewHolder extends RecyclerView.ViewHolder {
         ProgressBar loadingIndicator;
         TextView aiMessage;
 

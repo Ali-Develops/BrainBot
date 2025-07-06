@@ -1,19 +1,20 @@
 package edu.ma.appx.models;
 
+import androidx.annotation.NonNull;
+
 public class Message {
-    private String text;
-    private boolean isUser;
-    private boolean isLoading;
-    private boolean isAnimated; // New field for animation control
+    private final String text;
+    private final boolean isUser;
+    private final boolean isLoading;
+    private boolean isAnimated;
 
     public Message(String text, boolean isUser, boolean isLoading) {
         this.text = text;
         this.isUser = isUser;
         this.isLoading = isLoading;
-        this.isAnimated = false; // Initialize to false by default
+        this.isAnimated = false;
     }
 
-    // Constructor to allow setting isAnimated if loading from saved state
     public Message(String text, boolean isUser, boolean isLoading, boolean isAnimated) {
         this.text = text;
         this.isUser = isUser;
@@ -33,7 +34,6 @@ public class Message {
         return isLoading;
     }
 
-    // New getter and setter for animation flag
     public boolean isAnimated() {
         return isAnimated;
     }
@@ -42,7 +42,7 @@ public class Message {
         isAnimated = animated;
     }
 
-    // Optional: Add a toString() for easier debugging if needed
+    @NonNull
     @Override
     public String toString() {
         return "Message{" +
