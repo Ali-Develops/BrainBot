@@ -314,7 +314,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextExtracted(String extractedText) {
                 runOnUiThread(() -> {
-                    sendMessage(extractedText);
+                    final String message = "Here is the OCR-extracted text\n```\n" + extractedText + "\n```";
+                    messageInput.setText(message);
                     speechHelper.stopSpeaking();
                     Toast.makeText(MainActivity.this, "Text extracted from image!", Toast.LENGTH_SHORT).show();
                 });
